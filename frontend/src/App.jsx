@@ -40,7 +40,7 @@ export const App = () => {
   // JSX
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/mern-render">
         <Toaster position="top-right" />
         <Routes>
           {/* User Layout - with homePage on index mode */}
