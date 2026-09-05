@@ -12,7 +12,7 @@ adminproductsRouter.get('/',protect,admin,cach,async(req,res)=>{
     try {
         const products = await Product.find({});
         // set in redis
-        await redisClient.set('adminProducts',JSON.stringify(products),{EX:300})
+        // await redisClient.set('adminProducts',JSON.stringify(products),{EX:300})
         res.json(products);
     } catch (error) {
         console.log(error);

@@ -39,9 +39,9 @@ app.use('/api/payment',paymentRouter);
 // upload routes
 app.use('/api/upload',uploadRouter);
 // redis start
-(async () => {
-    await connectRedis();
-})();
+// (async () => {
+//     await connectRedis();
+// })();
 //---------------------------------
 // creating web server
 app.listen(config.get("server.port"), () => {
