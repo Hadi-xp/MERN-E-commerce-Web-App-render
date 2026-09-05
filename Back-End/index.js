@@ -44,6 +44,6 @@ app.use('/api/upload',uploadRouter);
 // })();
 //---------------------------------
 // creating web server
-app.listen(config.get("server.port"), () => {
+app.listen(config.get("server.port") || 5000, () => {
     console.log(`${config.get('server.name')} is running on port ${config.get("server.port")}`);
 });
