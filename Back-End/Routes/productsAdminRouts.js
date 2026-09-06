@@ -8,7 +8,7 @@ const {protect,admin} = require('../middleware/authMiddleware');
 // @route GET /api/admin/products
 // @desc Get all products (admin only)
 // @access Private/Admin
-adminproductsRouter.get('/',protect,admin,cach,async(req,res)=>{
+adminproductsRouter.get('/',protect,admin,async(req,res)=>{
     try {
         const products = await Product.find({});
         // set in redis
